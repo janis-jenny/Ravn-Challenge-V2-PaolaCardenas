@@ -15,10 +15,12 @@ const client = new ApolloClient({
 });
 
 const App = () => (
-  <ApolloProvider client={client}>
-    <Navbar />
-    <AllCharacters />
-  </ApolloProvider>
+  <>
+    <ApolloProvider client={client}>
+      <Navbar />
+      <AllCharacters />
+    </ApolloProvider>
+  </>
 );
 
 export default App;
