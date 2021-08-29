@@ -1,18 +1,16 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import ALL_CHARACTERS from '../graphql/allCharacters';
 import ItemCharacter from './ItemCharacter';
+import Error from './common/Error';
+import Loading from './common/Loading';
 
 const AllCharacters = () => {
   const { error, loading, data } = useQuery(ALL_CHARACTERS);
 
-  /* useEffect(() => {
-    console.log(data);
-  }, [data]); */
   const characters = () => {
-    if (loading) return <div>Loading...</div>;
-    if (error) return console.log(error);
+    if (loading) return <Loading />;
+    if (error) return <Error />;
 
     return data.allPeople.people.map((item) => (
       <ItemCharacter
@@ -24,7 +22,11 @@ const AllCharacters = () => {
     ));
   };
 
-  return (<section>{characters()}</section>);
+  return (
+    <>
+      <section>{characters()}</section>
+    </>
+  );
 };
 
 export default AllCharacters;
