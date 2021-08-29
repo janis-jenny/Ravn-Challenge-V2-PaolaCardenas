@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Error = ({ error }) => <span className="color-red">{error}</span>;
+const Error = ({ error }) => <div className="d-flex justify-content-center py-2"><span className="text-danger">{error}</span></div>;
 
 Error.defaultProps = {
   error: 'Failed to load data',

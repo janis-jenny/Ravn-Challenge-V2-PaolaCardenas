@@ -25,4 +25,13 @@ body {
   position: absolute;
   top: 2rem;
   right: 2.5rem;
+  color: #333333;
+}
+
+.arrow:hover {
+  color: #828282;
+}
+
+.card-style {
+  text-decoration: none;
 }
