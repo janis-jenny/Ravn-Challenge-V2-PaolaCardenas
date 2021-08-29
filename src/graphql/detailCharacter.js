@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 const DETAIL_CHARACTER = gql`
 query getCharacter($id: ID) {
-  person($id: ID) {
+  person($id: id) {
     name
     eyeColor
     skinColor
