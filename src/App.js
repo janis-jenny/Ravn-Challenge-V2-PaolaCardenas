@@ -5,7 +5,9 @@ import {
   ApolloProvider,
 } from '@apollo/client';
 import AllCharacters from './components/AllCharacters';
+import Navbar from './components/Navbar';
 import 'bootswatch/dist/sandstone/bootstrap.min.css';
+import './style/index.css';
 
 const client = new ApolloClient({
   uri: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
@@ -14,7 +16,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <h1>Characters</h1>
+    <Navbar />
     <AllCharacters />
   </ApolloProvider>
 );
