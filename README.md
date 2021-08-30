@@ -35,7 +35,7 @@
 
 ## 🔴 Live Demo:
 
-[Try it out]()
+[Try it out](https://peopleofstarwars.netlify.app/)
 
 
 
