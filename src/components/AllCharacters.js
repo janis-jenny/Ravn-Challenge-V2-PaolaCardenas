@@ -14,9 +14,8 @@ const AllCharacters = () => {
     if (error) return <Error />;
 
     return data.allPeople.people.map((item) => (
-      <div>
+      <div key={item.id}>
         <ItemCharacter
-          key={item.id}
           name={item.name}
           origin={item.homeworld.name}
           id={item.id}
